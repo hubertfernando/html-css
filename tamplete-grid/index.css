@@ -1,0 +1,83 @@
+body{
+    margin: 0%;
+}
+.contener{
+    height: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "cq cw ce "
+                         "cq  cr   ce "
+                         "cq   ct  ce";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100px  1fr  100px;
+
+}
+
+.cq{
+     grid-area: cq;
+    grid-template-areas: "im"
+                          "cqq"
+                          "gg";
+    display: grid;
+    grid-template-rows:300px;
+    grid-template-columns: 300px;
+}
+.i{
+    width: 100%;
+    height: 100%;
+}
+.img{
+    grid-area: im;
+   
+    
+    
+
+}
+.cq1{
+    background-color: blanchedalmond;
+    grid-area: cqq;
+}
+.g3{
+    background-color: blue;
+    grid-area: gg;
+}
+.cw{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    grid-area: cw;
+}
+.ce{
+    background-color: gold;
+    grid-area: ce;
+}
+.cr{
+    background-color: brown;
+    grid-area: cr;
+}
+.ct{
+    background-color: red;
+    grid-area: ct;
+}
+@media screen and (max-width: 782px){
+    .contener{
+        display: grid;
+        grid-template-columns:100%;
+        background-color: green;
+        flex-direction:column;
+        grid-template-areas: "cw "
+                            "ce "
+                            "cq"
+                            "cr"
+                            "ct";
+
+    }
+    
+    .ct{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: aquamarine;
+    }
+}
+
